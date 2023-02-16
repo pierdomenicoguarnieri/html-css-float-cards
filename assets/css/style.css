@@ -1,3 +1,4 @@
+/* General */
 *{
   margin: 0;
   padding: 0;
@@ -21,12 +22,14 @@ body{
   margin: 0 auto;
 }
 
+/* Header */
 header h1{
   margin: 40px 0;
   font-size: 40px;
   color: #E53170;
 }
 
+/* Main */
 main .container p{
   margin-bottom: 40px;
 }
