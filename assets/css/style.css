@@ -9,8 +9,14 @@ body{
   text-align: center;
 }
 
+.clearfix::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .container{
-  width: 80%;
+  width: 90%;
   max-width: 1170px;
   margin: 0 auto;
 }
@@ -19,4 +25,24 @@ header h1{
   margin: 40px 0;
   font-size: 40px;
   color: #E53170;
+}
+
+main .container p{
+  margin-bottom: 40px;
+}
+
+.cards-display .row{
+  margin-bottom: 50px;
+}
+
+.card{
+  width: calc((100%/3) - 20px);
+  height: 100px;
+  background-color: #0F0E17;
+  box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.178);
+  float: left;
+}
+
+.card:not(:last-child){
+  margin-right: 30px;
 }
