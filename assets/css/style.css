@@ -8,6 +8,12 @@
 body{
   font-family: 'Fredoka', sans-serif;
   text-align: center;
+  font-size: 18px;
+}
+
+.debug{
+  background-color: rgba(255, 0, 0, 0.5);
+  border: 1px solid black;
 }
 
 .clearfix::after{
@@ -22,6 +28,10 @@ body{
   margin: 0 auto;
 }
 
+.container p{
+  padding: 0 16px;
+}
+
 /* Header */
 header h1{
   margin: 40px 0;
@@ -34,48 +44,57 @@ main .container p{
   margin-bottom: 40px;
 }
 
-.cards-display .row{
+.row{
   margin-bottom: 50px;
 }
 
-.card{
-  width: calc((100%/3) - 20px);
-  height: 100px;
-  background-color: #0F0E17;
-  box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.178);
+.cards-display .row .col{
   float: left;
+  width: calc(100% / 3);
+  padding: 0 16px;
+  margin-bottom: 50px;
+  min-width: 340px;
 }
 
-.card:not(:last-child){
-  margin-right: 30px;
+.card{
+  background-color: #0F0E17;
+  box-shadow: 0px 0px 5px #0F0E17;
+  text-align: left;
+  color: white;
+  margin-top: 5px;
 }
 
-.card img{
-  height: 100%;
+.name, .profession, .email{
+  display: block;
+  font-size: 16px;
+  padding: 5px 0;
+}
+
+.card .avatar{
+  height: 100px;
   float: left;
   margin-right: 15px;
 }
 
-.card-info ul{
-  list-style: none;
-}
-
-.card .card-info{
-  color: white;
-  margin-top: 5px;
-  float: left;
-}
-
-.card-info.name{
+.card .name{
   font-weight: 700;
   text-transform: uppercase;
   font-size: 22px;
 }
 
-.card-info.email{
-  color: rgb(53, 200, 236);
+.card .profession{
+  text-transform: capitalize;
 }
 
-.card-info.email::after{
-  content: "@team.com";
+.card .email{
+  color: rgb(53, 200, 236);
+  text-decoration: none;
+}
+
+.card .email:hover{
+  text-decoration: underline;
+}
+
+footer > span{
+  color: #0F0E17;
 }
